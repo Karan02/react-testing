@@ -8,6 +8,7 @@ class CommentBox extends React.Component {
     }
     render() {
         return (
+            <div>
             <form onSubmit={(e) => {
                 e.preventDefault();
                 this.props.saveComment(this.state.comment)
@@ -19,6 +20,8 @@ class CommentBox extends React.Component {
                     <button>Submit comment</button>
                 </div>
             </form>
+            <button className="fetch-comments" onClick={this.props.fetchComments}>Fetch comments</button>
+            </div>
         )
     }
 }

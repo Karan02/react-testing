@@ -15,6 +15,10 @@ beforeEach(()=>{
     )
 })
 
+afterEach(()=>{
+    wrapped.unmount()
+})
+
 it("creates one LI per comment",()=>{
  const length = wrapped.find("li").length
  expect(length).toEqual(2)
